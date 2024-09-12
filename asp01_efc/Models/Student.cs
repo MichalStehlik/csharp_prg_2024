@@ -14,5 +14,7 @@ namespace asp01_efc.Models
         public string Lastname { get; set; } = string.Empty;
         public string? Middlename { get; set; }
         public int? ShoeSize { get; set; }
+        public required int ClassroomId { get; set; }
+        public Classroom? Classroom { get; set; }
     }
 }

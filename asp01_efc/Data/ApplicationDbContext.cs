@@ -8,6 +8,7 @@ namespace asp01_efc.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options): base(options) { }
 
         public DbSet<Student> Students { get; set; }
+        public DbSet<Classroom> Classrooms { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder); 
