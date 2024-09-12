@@ -19,7 +19,8 @@ namespace asp01_efc.Controllers
         [HttpGet]
         public IActionResult GetFrogs(string? firstname)
         {
-            IQueryable<Student> query = _context.Students.Include(x => x.Classroom);
+            IQueryable<Student> query = _context.Students
+                .Include(x => x.Classroom);
             if (!string.IsNullOrWhiteSpace(firstname))
             {
                 query = query.Where(x => x.Firstname.Contains(firstname));
@@ -64,6 +65,25 @@ namespace asp01_efc.Controllers
             _context.Students.Add(student);
             _context.SaveChanges();
             return CreatedAtAction(nameof(GetFrog), new { id = student.StudentId }, student);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateFrog(int id, [FromBody] Student student)
+        {
+            if (id != student.StudentId) return BadRequest();
+            _context.Entry(student).State = EntityState.Modified;
+            _context.SaveChanges();
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteFrog(int id)
+        {
+            var student = _context.Students.Find(id);
+            if (student == null) return NotFound();
+            _context.Students.Remove(student);
+            _context.SaveChanges();
+            return NoContent();
         }
     }
 }
