@@ -46,6 +46,7 @@ namespace asp01_efc.Controllers
             {
                 return NotFound();
             }
+            _context.Entry(student).Reference(x => x.Classroom).Load();
             return Ok(student);
             //Single() - přesně jeden záznam, pokud není, tak výjimka
             //SingleOrDefault() - přesně jeden záznam, pokud není, tak null
