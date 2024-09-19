@@ -13,7 +13,7 @@ namespace cs02_n2m.Model
         public int AuthorId { get; set; }
         public required string Firstname { get; set; }
         public required string Lastname { get; set; }
-        //public ICollection<Book>? Books { get; set; }
-        public ICollection<BookAuthor>? BookAuthors { get; set; }
+        public ICollection<Book>? Books { get; set; }
+        //public ICollection<BookAuthor>? BookAuthors { get; set; }
     }
 }

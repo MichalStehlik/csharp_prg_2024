@@ -3,12 +3,12 @@ using cs02_n2m.Data;
 using Microsoft.EntityFrameworkCore;
 
 AppDbContext db = new AppDbContext();
-var at = db.Authors.Include(a => a.BookAuthors).ThenInclude(ba => ba.Book).ToList();
+var at = db.Authors.Include(a => a.Books).ToList();
 foreach (var a in at)
 {
     Console.WriteLine(a.Firstname + " " + a.Lastname);
-    foreach (var ba in a.BookAuthors)
+    foreach (var b in a.Books)
     {
-        Console.WriteLine(" - " + ba.Book?.Title);
+        Console.WriteLine(" - " + b.Title);
     }
 }

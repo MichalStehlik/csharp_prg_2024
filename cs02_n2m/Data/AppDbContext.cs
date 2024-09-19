@@ -26,21 +26,25 @@ namespace cs02_n2m.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Author>().ToTable("Authors"); // This is optional
+            modelBuilder.Entity<Author>(opt =>
+            {
+                opt.HasKey(a => a.AuthorId);
+                opt.Property(a => a.Firstname).IsRequired();
+                opt.Property(a => a.Lastname).IsRequired();
+                opt.HasMany(a => a.Books).WithMany(b => b.Authors).UsingEntity<BookAuthor>();
+                opt.HasData(
+                    new Author { AuthorId = 1, Firstname = "Charles", Lastname = "Baudelaire" },
+                    new Author { AuthorId = 2, Firstname = "John", Lastname = "Steinbeck" }           
+                );
+            });
             modelBuilder.Entity<Book>().HasData(
                 new Book { BookId = 1, Title = "Květy zla" },
                 new Book { BookId = 2, Title = "Hrozny hněvu" },
                 new Book { BookId = 3, Title = "Na východ od ráje" }
             );
-            modelBuilder.Entity<Author>().HasData(
-                new Author { AuthorId = 1, Firstname = "Charles", Lastname = "Baudelaire" },
-                new Author { AuthorId = 2, Firstname = "John", Lastname = "Steinbeck" }
-            );
             modelBuilder.Entity<BookAuthor>(opt =>
             {
                 opt.HasKey(ba => new { ba.BookId, ba.AuthorId });
-                opt.HasOne(ba => ba.Book)
-                    .WithMany(b => b.BookAuthors)
-                    .HasForeignKey(ba => ba.BookId);
                 opt.HasData(
                     new BookAuthor { AuthorId = 1, BookId = 1 },
                     new BookAuthor { AuthorId = 2, BookId = 2 },

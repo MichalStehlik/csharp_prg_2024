@@ -13,7 +13,7 @@ namespace cs02_n2m.Model
         public int BookId { get; set; }
         //[Key]
         public int AuthorId { get; set; }
-        public Book? Book { get; set; }
-        public Author? Author { get; set; }
+        //public Book? Book { get; set; }
+        //public Author? Author { get; set; }
     }
 }
