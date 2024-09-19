@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asp01_efc", "asp01_efc\asp0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs02_n2m", "cs02_n2m\cs02_n2m.csproj", "{1D0BE0B6-4710-4A66-8F90-D5C117B327D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs03_sqlite", "cs03_sqlite\cs03_sqlite.csproj", "{3A51CC85-ED41-4341-B592-65E6537B99DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1D0BE0B6-4710-4A66-8F90-D5C117B327D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D0BE0B6-4710-4A66-8F90-D5C117B327D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D0BE0B6-4710-4A66-8F90-D5C117B327D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A51CC85-ED41-4341-B592-65E6537B99DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A51CC85-ED41-4341-B592-65E6537B99DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A51CC85-ED41-4341-B592-65E6537B99DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A51CC85-ED41-4341-B592-65E6537B99DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
