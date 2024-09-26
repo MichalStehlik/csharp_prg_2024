@@ -55,18 +55,18 @@ namespace cs04_fluentEfc.Migrations
                         new
                         {
                             RecordId = 1,
-                            CreatedAt = new DateTime(2024, 9, 26, 9, 29, 34, 650, DateTimeKind.Local).AddTicks(1288),
-                            CreatorId = new Guid("201da9f2-de3c-4a0d-9f6a-08df2c61ba15"),
+                            CreatedAt = new DateTime(2024, 9, 26, 9, 51, 21, 156, DateTimeKind.Local).AddTicks(2251),
+                            CreatorId = new Guid("209f979c-9737-404d-9b28-4cc8dbab3474"),
                             Description = "Task 1",
-                            UserId = new Guid("dc8032b0-f23c-42e2-a770-99d5ac22b04a")
+                            UserId = new Guid("2a6f961b-6489-4be3-8af3-2950cd730540")
                         },
                         new
                         {
                             RecordId = 2,
-                            CreatedAt = new DateTime(2024, 9, 26, 9, 29, 34, 650, DateTimeKind.Local).AddTicks(1345),
-                            CreatorId = new Guid("dc8032b0-f23c-42e2-a770-99d5ac22b04a"),
+                            CreatedAt = new DateTime(2024, 9, 26, 9, 51, 21, 156, DateTimeKind.Local).AddTicks(2309),
+                            CreatorId = new Guid("2a6f961b-6489-4be3-8af3-2950cd730540"),
                             Description = "Task 2",
-                            UserId = new Guid("201da9f2-de3c-4a0d-9f6a-08df2c61ba15")
+                            UserId = new Guid("209f979c-9737-404d-9b28-4cc8dbab3474")
                         });
                 });
 
@@ -91,25 +91,25 @@ namespace cs04_fluentEfc.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = new Guid("201da9f2-de3c-4a0d-9f6a-08df2c61ba15"),
+                            UserId = new Guid("209f979c-9737-404d-9b28-4cc8dbab3474"),
                             Firstname = "John",
                             Lastname = "Doe"
                         },
                         new
                         {
-                            UserId = new Guid("dc8032b0-f23c-42e2-a770-99d5ac22b04a"),
+                            UserId = new Guid("2a6f961b-6489-4be3-8af3-2950cd730540"),
                             Firstname = "Jane",
                             Lastname = "Doe"
                         },
                         new
                         {
-                            UserId = new Guid("7cf789e7-c508-4f8b-90b4-c200e54c6d6a"),
+                            UserId = new Guid("14daecb3-c630-4cae-bf5f-d226bc9f3f53"),
                             Firstname = "Alice",
                             Lastname = "Smith"
                         },
                         new
                         {
-                            UserId = new Guid("19be1d3c-44b3-4055-926a-da1b8b33aa11"),
+                            UserId = new Guid("7e5b83f5-1dc1-49ae-8db3-4412433a7eff"),
                             Firstname = "Bob",
                             Lastname = "Smith"
                         });
@@ -118,20 +118,27 @@ namespace cs04_fluentEfc.Migrations
             modelBuilder.Entity("cs04_fluentEfc.Models.Record", b =>
                 {
                     b.HasOne("cs04_fluentEfc.Models.User", "Creator")
-                        .WithMany()
+                        .WithMany("CreatedRecords")
                         .HasForeignKey("CreatorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("cs04_fluentEfc.Models.User", "User")
-                        .WithMany()
+                        .WithMany("AssignedRecords")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Creator");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("cs04_fluentEfc.Models.User", b =>
+                {
+                    b.Navigation("AssignedRecords");
+
+                    b.Navigation("CreatedRecords");
                 });
 #pragma warning restore 612, 618
         }

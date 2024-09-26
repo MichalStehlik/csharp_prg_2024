@@ -36,11 +36,11 @@ namespace cs04_fluentEfc.Data
                 option.HasOne(r => r.Creator)
                     .WithMany(u => u.CreatedRecords)
                     .HasForeignKey(r => r.CreatorId)
-                    .OnDelete(DeleteBehavior.Restrict);
+                    .OnDelete(DeleteBehavior.NoAction);
                 option.HasOne(r => r.User)
                     .WithMany(u => u.AssignedRecords)
                     .HasForeignKey(r => r.UserId)
-                    .OnDelete(DeleteBehavior.Cascade);
+                    .OnDelete(DeleteBehavior.NoAction);
                 option.HasData(
                     new Record { RecordId = 1, Description = "Task 1", CreatorId = user1, UserId = user2 },
                     new Record { RecordId = 2, Description = "Task 2", CreatorId = user2, UserId = user1 }

@@ -44,14 +44,12 @@ namespace cs04_fluentEfc.Migrations
                         name: "FK_Records_Users_CreatorId",
                         column: x => x.CreatorId,
                         principalTable: "Users",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "UserId");
                     table.ForeignKey(
                         name: "FK_Records_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "UserId");
                 });
 
             migrationBuilder.InsertData(
@@ -59,10 +57,10 @@ namespace cs04_fluentEfc.Migrations
                 columns: new[] { "UserId", "Firstname", "Lastname" },
                 values: new object[,]
                 {
-                    { new Guid("19be1d3c-44b3-4055-926a-da1b8b33aa11"), "Bob", "Smith" },
-                    { new Guid("201da9f2-de3c-4a0d-9f6a-08df2c61ba15"), "John", "Doe" },
-                    { new Guid("7cf789e7-c508-4f8b-90b4-c200e54c6d6a"), "Alice", "Smith" },
-                    { new Guid("dc8032b0-f23c-42e2-a770-99d5ac22b04a"), "Jane", "Doe" }
+                    { new Guid("14daecb3-c630-4cae-bf5f-d226bc9f3f53"), "Alice", "Smith" },
+                    { new Guid("209f979c-9737-404d-9b28-4cc8dbab3474"), "John", "Doe" },
+                    { new Guid("2a6f961b-6489-4be3-8af3-2950cd730540"), "Jane", "Doe" },
+                    { new Guid("7e5b83f5-1dc1-49ae-8db3-4412433a7eff"), "Bob", "Smith" }
                 });
 
             migrationBuilder.InsertData(
@@ -70,8 +68,8 @@ namespace cs04_fluentEfc.Migrations
                 columns: new[] { "RecordId", "CreatedAt", "CreatorId", "Description", "UserId" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 9, 26, 9, 29, 34, 650, DateTimeKind.Local).AddTicks(1288), new Guid("201da9f2-de3c-4a0d-9f6a-08df2c61ba15"), "Task 1", new Guid("dc8032b0-f23c-42e2-a770-99d5ac22b04a") },
-                    { 2, new DateTime(2024, 9, 26, 9, 29, 34, 650, DateTimeKind.Local).AddTicks(1345), new Guid("dc8032b0-f23c-42e2-a770-99d5ac22b04a"), "Task 2", new Guid("201da9f2-de3c-4a0d-9f6a-08df2c61ba15") }
+                    { 1, new DateTime(2024, 9, 26, 9, 51, 21, 156, DateTimeKind.Local).AddTicks(2251), new Guid("209f979c-9737-404d-9b28-4cc8dbab3474"), "Task 1", new Guid("2a6f961b-6489-4be3-8af3-2950cd730540") },
+                    { 2, new DateTime(2024, 9, 26, 9, 51, 21, 156, DateTimeKind.Local).AddTicks(2309), new Guid("2a6f961b-6489-4be3-8af3-2950cd730540"), "Task 2", new Guid("209f979c-9737-404d-9b28-4cc8dbab3474") }
                 });
 
             migrationBuilder.CreateIndex(
