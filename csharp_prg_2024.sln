@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cs03_sqlite", "cs03_sqlite\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs04_fluentEfc", "cs04_fluentEfc\cs04_fluentEfc.csproj", "{436D376E-88C2-4EEE-AD21-591E48F4FB15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs05_dapper", "cs05_dapper\cs05_dapper.csproj", "{FA92773A-4745-4409-B2DB-273CB0C95AF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{436D376E-88C2-4EEE-AD21-591E48F4FB15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{436D376E-88C2-4EEE-AD21-591E48F4FB15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{436D376E-88C2-4EEE-AD21-591E48F4FB15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA92773A-4745-4409-B2DB-273CB0C95AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA92773A-4745-4409-B2DB-273CB0C95AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA92773A-4745-4409-B2DB-273CB0C95AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA92773A-4745-4409-B2DB-273CB0C95AF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
