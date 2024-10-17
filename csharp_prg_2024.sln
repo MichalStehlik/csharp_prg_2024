@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cs02_n2m", "cs02_n2m\cs02_n
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cs03_sqlite", "cs03_sqlite\cs03_sqlite.csproj", "{3A51CC85-ED41-4341-B592-65E6537B99DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs04_fluentEfc", "cs04_fluentEfc\cs04_fluentEfc.csproj", "{436D376E-88C2-4EEE-AD21-591E48F4FB15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cs04_fluentEfc", "cs04_fluentEfc\cs04_fluentEfc.csproj", "{436D376E-88C2-4EEE-AD21-591E48F4FB15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs05_dapper", "cs05_dapper\cs05_dapper.csproj", "{FA92773A-4745-4409-B2DB-273CB0C95AF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cs05_dapper", "cs05_dapper\cs05_dapper.csproj", "{FA92773A-4745-4409-B2DB-273CB0C95AF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs06_mongo", "cs06_mongo\cs06_mongo.csproj", "{C44EE71E-19F0-4A75-8350-9699D38B915A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{FA92773A-4745-4409-B2DB-273CB0C95AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA92773A-4745-4409-B2DB-273CB0C95AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA92773A-4745-4409-B2DB-273CB0C95AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C44EE71E-19F0-4A75-8350-9699D38B915A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C44EE71E-19F0-4A75-8350-9699D38B915A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C44EE71E-19F0-4A75-8350-9699D38B915A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C44EE71E-19F0-4A75-8350-9699D38B915A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
